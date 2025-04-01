@@ -91,8 +91,13 @@ html{
 }
 
 .info {
-    margin-left: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 6%;
+    margin-left: 7%;
+    text-align: center;
     flex: 1;
 }
 
@@ -140,8 +145,8 @@ html{
 }
 
 .image img.girl {
-    max-width: 80%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -309,6 +314,23 @@ html{
 .contact-item i {
     font-size: 20px;
     color: #ff6600;
+}
+
+.icons a{
+    text-decoration: none;
+    color: #000;
+}
+
+.icons ion-icon{
+    color: #000;
+    font-size: 40px;
+    transition: .4s ease;
+    gap: 15px;
+
+}
+
+.icons ion-icon:hover{
+    color: coral;
 }
 
 
