@@ -19,12 +19,14 @@ html{
 }
 
 .navbar {
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    z-index: 10; 
 }
 
 .hamburger {
@@ -90,7 +92,7 @@ html{
 
 .info {
     margin-left: 7%;
-    margin-top: 8%;
+    margin-top: 6%;
     flex: 1;
 }
 
@@ -134,15 +136,15 @@ html{
     align-items: center;
     flex: 0 1 400px;
     margin: 10px;
+    overflow: hidden;
 }
 
 .image img.girl {
-    max-width: 400px;
-    height: 500px;
+    max-width: 80%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
 }
-
 
 .container {
     background: url(pic/bg.jpg);
