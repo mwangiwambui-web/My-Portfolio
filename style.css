@@ -197,7 +197,9 @@ html{
     margin-bottom: 10px;
 }
 #education a {
-    color: blue;
+    color: black;
+    border-radius: 8px;
+
 }
 
 .edu-item p {
@@ -335,6 +337,46 @@ html{
 .icons ion-icon:hover{
     color: coral;
 }
+.contact-form {
+    width: 60%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    color: coral;
+}
+
+.contact-form label {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: coral;
+}
+
 
 
 
