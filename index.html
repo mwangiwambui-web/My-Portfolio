@@ -107,23 +107,15 @@
 </section>
 
 
-<section id="works">
-    <div class="container">
-        <h2>My Works</h2>
-        <div class="work-item">
-            <img src="pic/AMS.png" alt="Project 1">
-            <h1>Assets Management System</h1>
-             <p>This is an asset management system that I created using Python django framework for the back-end and HTML,CSS,Javascript and bootstrap for frontend.This website helps in the management and tracking of ICT assets in hospitals</p>
+<section id="slider">
+    <div class="slider-container">
+        <div class="slider-images">
+            <img src="pic/AMS.png" alt="Project 1" class="slide">
+            <img src="pic/dairy_system.png" alt="Project 2" class="slide">
+            <img src="pic/portfolio.png" alt="Project 3" class="slide">
         </div>
-        <div class="work-item">
-            <img src="pic/dairy_system.png" alt="Project 2">
-            <h1>Milk Collection System</h1>
-             <p>This is a milk collection system that I created using Python django framework for the back-end and HTML,CSS,Javascript and bootstrap for frontend.This website is meant for automation of  milk collection and keeping collection records it also manages farmers payments and has an advisory system that recommends farmers with solutions to improve their dairy produce</p>
-        </div>
-        <div class="work-item">
-            <img src="pic/portfolio.png" alt="Project 3">
-            <h1>My Portfolio</h1>
-        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 </section>
 
@@ -209,6 +201,27 @@
             sidebar.classList.remove("active");
         });
     });
+    let slideIndex = 0;
+
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.slide');
+    slideIndex += step;
+
+    // Loop through slides
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+    setInterval(function() {
+    moveSlide(1);
+}, 3000); 
+
+    const sliderImages = document.querySelector('.slider-images');
+    sliderImages.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function (e) {
         e.preventDefault(); 
