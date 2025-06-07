@@ -22,17 +22,11 @@
         <li><a href="#contact">CONTACT</a></li>
     </ul>
 </div>
-
-
-<div class="container1">
-
     <div class="info">
         <h2>Hi, I'm <span>LINET</span>.</h2>
         <h1><span>w</span>eb <span>d</span>eveloper</h1>
         <h3>Web developer located in Kenya. I create <br> responsive and user-friendly websites</h3>
         <a href="assets/Linet_CV.pdf" target="_blank">Hire Me</a>
-    </div>
-
 </div>
 
 <section id="about">
@@ -113,6 +107,7 @@
             <img src="pic/AMS.png" alt="Project 1" class="slide">
             <img src="pic/dairy_system.png" alt="Project 2" class="slide">
             <img src="pic/portfolio.png" alt="Project 3" class="slide">
+            <img src="pic/ProfileHub.png" alt="Project 4" class="slide">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -174,7 +169,7 @@
         <a href="https://www.linkedin.com/in/linet-mwangi-249a3a297" target="_blank">
             <ion-icon name="logo-linkedin"></ion-icon>
         </a>
-        <a href="https://github.com/linetmwangi" target="_blank">
+        <a href="https://github.com/mwangiwambui-web" target="_blank">
             <ion-icon name="logo-github"></ion-icon>
         </a>
         <a href="https://www.facebook.com/linet.mwangi.7792" target="_blank">
@@ -214,13 +209,20 @@ function moveSlide(step) {
     if (slideIndex >= slides.length) {
         slideIndex = 0;
     }
-    setInterval(function() {
-    moveSlide(1);
-}, 3000); 
 
     const sliderImages = document.querySelector('.slider-images');
     sliderImages.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
+
+// Auto move slides every 3 seconds
+setInterval(function() {
+    moveSlide(1);
+}, 3000);
+
+// Initialize slider position on page load
+document.addEventListener('DOMContentLoaded', function() {
+    moveSlide(0);
+});
 
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function (e) {
